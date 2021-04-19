@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Converter from "./components/converter";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="App">
+        <div className="box">
+          <div className="square" style={{ "--i": "0" }}></div>
+          <div className="square" style={{ "--i": "1" }}></div>
+          <div className="square" style={{ "--i": "2" }}></div>
+          <div className="square" style={{ "--i": "3" }}></div>
+          <div className="square" style={{ "--i": "4" }}></div>
+          <Converter />
+        </div>
+      </div>
     </div>
   );
 }
